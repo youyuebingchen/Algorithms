@@ -13,6 +13,7 @@ def scraw(str1,str2):
         return "YES"
     else:
         return "NO"
+# KMP算法：从头到尾匹配，一旦不匹配指针回到开始下移一位
 def scraw2(str1,str2):
     str = str1+str1
     i = 0
@@ -26,7 +27,7 @@ def scraw2(str1,str2):
             j +=1
         else:
             start +=1
-            i = start
+            i = start # i - j + 1
             j = 0
     if j == len(str2):
         return "yes"
